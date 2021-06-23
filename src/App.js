@@ -1,12 +1,33 @@
 import React, { useState } from 'react';
-import Welcome from './components/Welcome';
-
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import {HashRouter as Router, Switch, Route, useParams} from "react-router-dom";
+import About from "./components/About";
+import Projects from './components/Projects';
+import Resume from "./components/Resume";
+import Contact from "./components/Contact"
 function App() {
-  // Here we declare a state boolean variable "loggedIn" and a function to update it.
-  const [loggedIn, setLoggedIn] = useState(false);
-
   // We return the Welcome component and pass loggedIn and setLoggedIn as props.
-  return <Welcome loggedIn={loggedIn} setLoggedIn={setLoggedIn} />;
+  return (
+    <Router basename="/">
+      <Header/>
+      <Switch>
+        <Route exact path="/">
+          <About/>  
+        </Route>
+        <Route path="/projects">
+          <Projects/>
+        </Route>
+        <Route path="/resume">
+          <Resume/>
+        </Route>
+        <Route path="/contact">
+          <Contact/>
+        </Route>
+      </Switch>
+      <Footer/>
+    </Router>
+  );
 }
 
 export default App;
