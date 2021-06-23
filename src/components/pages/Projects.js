@@ -1,6 +1,6 @@
 import React from 'react';
 import Project from './Project';
-import scheduler from "../images/scheduler.PNG";
+import scheduler from "../../images/scheduler.PNG";
 
 export default function Projects(){
     return(
