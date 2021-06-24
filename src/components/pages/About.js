@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function About(){
     return(
-    <>
+    <div className="container">
     <section id="about" className="sectionHeader">
         <h2 className="section">About</h2>
         <div className="strike"></div>
@@ -18,6 +18,6 @@ export default function About(){
         </p>
         <aside className="right-aside"></aside>
     </section>
-    </>
+    </div>
     )
 }
