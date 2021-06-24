@@ -17,7 +17,7 @@ export default function Portfolio(){
     return (
         <Router basename="/" >
           <Header/>
-          <div style={styles.portfolioBody} >
+          <div className="mt-3" style={styles.portfolioBody} >
             <Switch>
                 <Route exact path="/">
                 <About/>  
